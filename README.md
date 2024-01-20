@@ -1,1 +1,1 @@
-# LCOC Moel
+# LCOC Model
