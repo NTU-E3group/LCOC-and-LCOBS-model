@@ -112,4 +112,36 @@ def sen_lcoc_grahp(df_base_sen):
     plt.xlabel("RMB/kWh",fontsize=27)
 
 
+def lcoc_utization_graph(df_u_c, baseline_result):
+    u_c = df_u_c['utilzation_rate']
+    lcoc_7 = df_u_c['7kw']
+    lcoc_50 = df_u_c['50kw']
+    lcoc_162 = df_u_c['163kw']
+    lcoc_350 = df_u_c['350kw']
 
+    ax1 = plt.figure(figsize=(20,12), dpi=400).add_subplot(111)
+    ax3 = ax1.twinx()
+
+    ax1.axhline(baseline_result, color='black',linewidth = 5, linestyle =':', label='Resi. L1: 1 - 3 kW')
+    ax1.plot(u_c, lcoc_7, linewidth = 4.5, color = '#FFEA20', label ='Resi. L2/Work: 7 kW', marker = 'o', markevery=10 , markersize = 10)
+    ax1.plot(u_c, lcoc_50, linewidth = 4.5, color = '#379237', label ='Public: ≤ 50 kW', marker ='o', markevery=10, markersize = 10)
+    ax1.plot(u_c, lcoc_162, linewidth = 4.5 ,color = '#82CD47', label= 'Public: 150~175 kW' , marker ='D', markevery=10, markersize = 10)
+    ax1.plot(u_c, lcoc_350, linewidth = 4.5 ,color = '#54B435', label = 'Public: ≥ 350kW', marker ='s', markevery=10, markersize = 10)
+
+
+    ax1.grid(True,axis='y',linestyle = '-.' )
+    ax1.grid(True,axis='x',linestyle = '-.' )
+
+    ax1.set_xlim(0, 0.26)
+    ax1.set_ylim(0.4, 2.6)
+    ax1.set_xticklabels(['     0%','5%','10%','15%','20%','25%'],fontsize = 28)
+
+    ax1.set_yticklabels([round(x ,2) for x in ax1.get_yticks()],fontsize = 28)
+
+    ax3.set_yticks(ax1.get_yticks())
+    ax3.set_ybound(ax1.get_ybound())
+    ax3.set_yticklabels([round(x * 11.98,1) for x in ax1.get_yticks()],fontsize = 28)
+
+    ax1.legend(fontsize='35')
+
+    plt.show()
