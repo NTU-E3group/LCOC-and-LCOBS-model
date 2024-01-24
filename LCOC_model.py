@@ -3,6 +3,7 @@
 import numpy as np
 import pandas as pd
 
+#Single LCOC calculator
 class LCOCCalculator:
     def __init__(self,short_name, c_r_purchase , c_r_install , om_factor, c_s_r_electiricity, r_evse_eff, r_tfs, dr, n, 
                  r_charging_mix, A_vkt, FE, l1, l2, w_workday,w_evse_eff,w_daily_output,c_s_w_electiricity,c_p_purchase,p_install_factor,
@@ -186,7 +187,7 @@ class LCOCCalculator:
         self.province_lcoc()
         return self
 
-    
+ #Povinces average LCOC   
 class LCOC_province_calculator(LCOCCalculator):
     def __init__(self, short_name, c_r_purchase, c_r_install, om_factor, c_s_r_electiricity, r_evse_eff, 
                  r_tfs, dr, n, r_charging_mix, A_vkt, FE, l1, l2, w_workday, w_evse_eff, w_daily_output, 
