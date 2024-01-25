@@ -1,9 +1,9 @@
 # Modeling Levelized Cost of Charging & Levelized Cost of Battery Swapping
 
 ## Project Description
-This project aim to model the levelized cost of charging (LCOCS) and levelized cost of battery swapping (LCOBS) for electric vehicles. By simulating the charging and battery swapping processes, we calculate the associated costs and provide insights into the economic aspects of these operations.
+This research project aim to model the levelized cost of charging (LCOC) and levelized cost of battery swapping (LCOBS) for electric vehicles. By simulating the charging and battery swapping processes, we calculate the associated costs and provide insights into the economic aspects of these operations.
 
-Our research result: LCOC_LCOBS_analysis.ipynb 
+Our research result (Also a DEMO for code using): [LCOC_LCOBS_analysis.ipynb](https://github.com/NTU-E3group/unname-4/blob/main/LCOC_LCOBS_analysis.ipynb) 
 
 ### What is Levelized Cost of Charging (LCOC)?
 
