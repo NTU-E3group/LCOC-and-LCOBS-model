@@ -53,7 +53,7 @@ class LCOBScalculator:
     
     def taxi_coming_timeseries_model(self):
         nnb = [x * 4 for x in self.nt[:-2]]+[0,0]
-        nfs = [0]*23 + [160]
+        nfs = [0]*23 + [160] #init
         nb =  [x * 4 for x in self.nt]
         nes = [0]*24
         nbc = [0]*24
