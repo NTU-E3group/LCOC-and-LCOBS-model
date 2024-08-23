@@ -52,7 +52,7 @@ Follow these steps to utilize our model:
 
 1. **Clone the Repository:**
     ```bash
-    git clone https://github.com/NTU-E3group/unname-4.git 
+    git clone https://github.com/NTU-E3group/LCOC-and-LCOBS-model.git 
 
 2. **Import the LCOC Module or LCOBS Module:**
     ```python
