@@ -140,16 +140,6 @@ Follow these steps to utilize our model:
         Calculates the combined LCOC for all types of infrastructures.
 
 
-3. **Sensitivity Analysis (Optional):**
-    The model allows for sensitivity analysis by changing specific parameters. Utilize the setup functions provided in the model to adjust these parameters.
-    ```python
-    lcoc_calculator.setup_c_r_capital(new_c_r_purchase, new_c_r_install)
-    lcoc_calculator.setup_r_om_factor(new_om_factor)
-
-4. **LCOC_province_calculator**
-    The LCOC model also includes a subclass `LCOC_province_calculator` for calculating average LCOCs across different provinces. This can be initialized and used in a similar manner, with additional parameters specific to each province.
-
-
 ### Levelized Cost of Battery Swapping Model(LCOBS)-- LCOBS_model.py:
 1. **Initialize the Calculator:**
     Create an instance of `LCOBScalculator` by providing the necessary parameters:
@@ -214,10 +204,6 @@ Follow these steps to utilize our model:
 
    9. `describe()`
       Provides a detailed description of various cost components.
-
-4. **Advanced Usage**
-    The model also includes setup functions like `set_up_nt`, `set_up_battery_price`, and `set_up_alpha` for sensitivity analysis and adjusting model parameters.
-
 
 
 
